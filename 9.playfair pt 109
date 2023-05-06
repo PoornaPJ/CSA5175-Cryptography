@@ -1,0 +1,10 @@
+def generate_matrix(key):
+    
+    key = key.replace(" ", "").upper()  
+    key = "".join(sorted(set(key), key=key.index))  
+    alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ"  
+    matrix = []
+    for letter in key + alphabet:
+        if letter not in matrix:
+            matrix.append(letter)
+    return matrix
